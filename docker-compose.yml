@@ -1,0 +1,21 @@
+# version: '3.4'
+
+# services:
+version: '3.5'
+
+services:
+
+  app:
+    container_name: wat-php-xdebug
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - '8085:80'
+    volumes:
+        - './index.php:/var/www/html/index.php'
+    environment:
+      #V2 XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9003 remote_enable=1
+      XDEBUG_MODE: debug
+      XDEBUG_SESSION: VSCODE
+      XDEBUG_CONFIG: client_host=host.docker.internal client_port=9003 start_with_request=yes
