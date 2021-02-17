@@ -7,7 +7,8 @@ $ docker-compose up
 ```
 
 3. set breakpoint in VSCode in index.php
-4. open `localhost:8085` in browser should hit breakpoint.
+4. Run the `Listen for XDebug on Docker App` configuration from the Debug tab, or hit `F5`
+5. open `localhost:8085` in browser should hit breakpoint.
 
 # References
 
